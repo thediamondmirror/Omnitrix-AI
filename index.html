@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omnitrix AI - Blog Generator</title>
-
+    <title>Omnitrix AI - Blog Generator & Chat</title>
+    
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/video.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/blog.css">
-
+    <link rel="stylesheet" href="styles/chat.css">
+    
     <script defer src="scripts/blog.js"></script>
+    <script defer src="scripts/chat.js"></script>
 </head>
 <body>
-
-    <!-- Header (YouTube-style) -->
     <header class="header">
         <div class="left-section">
             <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-            <img class="youtube-logo" src="icons/youtube-logo.svg">
+            <h1 class="logo">Omnitrix AI</h1>
         </div>
         <div class="middle-section">
-            <input class="search-bar" type="text" id="blogTopic" placeholder="Enter blog topic...">
+            <input class="search-bar" type="text" id="blogTopic" placeholder="Enter a blog topic...">
             <button class="search-button" onclick="generateBlog()">
                 <img class="search-icon" src="icons/search.svg">
             </button>
@@ -32,7 +32,6 @@
         </div>
     </header>
 
-    <!-- Sidebar (Can be used for categories in the future) -->
     <nav class="sidebar">
         <div class="sidebar-link">
             <img src="icons/home.svg">
@@ -44,7 +43,6 @@
         </div>
     </nav>
 
-    <!-- Blog Posts Grid -->
     <main>
         <h2 class="section-title">Generated Blogs</h2>
         <section id="blogGrid" class="video-grid"></section>
@@ -59,5 +57,13 @@
         </div>
     </div>
 
+    <!-- Chat Interface -->
+    <div id="chatContainer" class="chat-container">
+        <div id="chatBox" class="chat-box"></div>
+        <div class="chat-input-container">
+            <textarea id="chatInput" placeholder="Ask Omnitrix what to write next..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 </body>
 </html>
