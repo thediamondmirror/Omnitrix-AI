@@ -22,8 +22,8 @@
             <h1 class="logo">Omnitrix AI</h1>
         </div>
         <div class="middle-section">
-            <input class="search-bar" type="text" id="blogTopic" placeholder="Enter a blog topic...">
-            <button class="search-button" onclick="generateBlog()">
+            <input class="search-bar" type="text" id="searchInput" placeholder="Search...">
+            <button class="search-button">
                 <img class="search-icon" src="icons/search.svg">
             </button>
         </div>
@@ -59,10 +59,10 @@
 
     <!-- Chat Interface -->
     <div id="chatContainer" class="chat-container">
-        <div id="chatBox" class="chat-box"></div>
+        <div class="chat-box" id="chatBox"></div>
         <div class="chat-input-container">
             <textarea id="chatInput" placeholder="Ask Omnitrix what to write next..."></textarea>
-            <button onclick="sendMessage()">Send</button>
+            <button onclick="submitChatRequest()">Enter</button>
         </div>
     </div>
 </body>
