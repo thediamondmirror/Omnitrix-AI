@@ -1,0 +1,104 @@
+/* Chat Container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: center; /* Ensures chat stays centered */
+    position: fixed;
+    bottom: 20px; /* Adds space from the bottom */
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Matches surroundings */
+    padding: 15px 0;
+}
+
+/* Chat Input Container */
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    padding: 12px;
+    width: 85%; /* Ensures it stays within screen bounds */
+    max-width: 800px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Chat Input (Textarea) */
+.chat-input {
+    flex: 1;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    height: 30px;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+/* Left-Side Action Buttons */
+.chat-actions-left {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.chat-icon-btn {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.chat-icon-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+.chat-icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Right-Side Send Button */
+.chat-send-btn {
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+    margin-right: 10px;
+}
+
+.chat-send-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.chat-send-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust for Smaller Screens */
+@media (max-width: 600px) {
+    .chat-input-container {
+        width: 95%;
+        max-width: 100%;
+    }
+}

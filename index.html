@@ -48,21 +48,26 @@
         <section id="blogGrid" class="video-grid"></section>
     </main>
 
-    <!-- Full-Screen Modal for Viewing Blog Posts -->
-    <div id="blogModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeBlog()">&times;</span>
-            <h2 id="blogTitle"></h2>
-            <p id="blogContent"></p>
-        </div>
-    </div>
-
     <!-- Chat Interface -->
     <div id="chatContainer" class="chat-container">
         <div class="chat-box" id="chatBox"></div>
+        
+        <!-- Chat Input Field -->
         <div class="chat-input-container">
-            <textarea id="chatInput" placeholder="Ask Omnitrix what to write next..."></textarea>
-            <button onclick="submitChatRequest()">Enter</button>
+            <!-- Left-side Buttons -->
+            <div class="chat-actions-left">
+                <button class="chat-icon-btn"><span>+</span></button>
+                <button class="chat-icon-btn"><img src="icons/search.svg" alt="Search"></button>
+                <button class="chat-icon-btn"><img src="icons/more.svg" alt="More"></button>
+            </div>
+
+            <!-- Chat Input -->
+            <textarea id="chatInput" class="chat-input" placeholder="Message Omnitrix AI..."></textarea>
+
+            <!-- Right-side Button -->
+            <button class="chat-send-btn">
+                <img src="icons/microphone.svg" alt="Voice">
+            </button>
         </div>
     </div>
 </body>
